@@ -2,12 +2,11 @@
 using CentralAuth;
 using HarmonyLib;
 using JetBrains.Annotations;
-using LabApi.Features.Console;
 using MEC;
 using Mirror;
 using Mirror.LiteNetLib4Mirror;
-using NetworkManagerUtils;
 using SLCryptoAuth.Server.Core;
+using Exiled.API.Features;
 
 namespace SLCryptoAuth.Server.Patches;
 
@@ -22,7 +21,6 @@ internal static class AuthManagerPatch
         if (PlayerAuthenticationManager.OnlineMode) return;
         
         if (__instance.isLocalPlayer) return;
-        if (__instance.connectionToClient is DummyNetworkConnection) return;
 
         if (!__instance.connectionToClient.isReady) return;
         if (__instance._authenticationRequested) return;
@@ -49,7 +47,7 @@ internal static class AuthManagerPatch
         }
         catch (Exception e)
         {
-            Logger.Error(e);
+            Log.Error(e.ToString());
         }
     }
 
@@ -61,7 +59,6 @@ internal static class AuthManagerPatch
         if (PlayerAuthenticationManager.OnlineMode) return true;
         
         if (__instance.isLocalPlayer) return true;
-        if (__instance.connectionToClient is DummyNetworkConnection) return true;
 
         var netPeer = LiteNetLib4MirrorServer.Peers[__instance.connectionToClient.connectionId];
         var endPoint = netPeer.EndPoint;
@@ -79,7 +76,7 @@ internal static class AuthManagerPatch
         }
         catch (Exception e)
         {
-            Logger.Error(e);
+            Log.Error(e.ToString());
         }
 
         return false;

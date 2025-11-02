@@ -1,3 +1,10 @@
+# kijetesantakalu's SLCryptoAuth fork
+
+# ignore Exiled for licensing reasons
+/libs/server*/EXILED_v*/*
+!/libs/server*/EXILED_v*/.gitkeep
+
+
 # # JetBrains Rider & Visual Studio C# .gitignore
 
 # ## Общие для IDE и системы ##

@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Net;
 using System.Text;
-using LabApi.Features.Console;
 using LiteNetLib;
 using SLCryptoAuth.Cryptography.DigitalSignature;
 using SLCryptoAuth.Network;

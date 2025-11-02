@@ -638,6 +638,27 @@
 	<Reference Include="zxing">
 		<HintPath>..\..\..\libs\server13.5.1\SCPSL_Data\Managed\zxing.dll</HintPath>
 	</Reference>
+	<Reference Include="Exiled.API">
+		<HintPath>..\..\..\libs\server13.5.1\EXILED_v8.12.2\Exiled.API.dll</HintPath>
+	</Reference>
+	<Reference Include="Exiled.CreditTags">
+		<HintPath>..\..\..\libs\server13.5.1\EXILED_v8.12.2\Exiled.CreditTags.dll</HintPath>
+	</Reference>
+	<Reference Include="Exiled.CustomItems">
+		<HintPath>..\..\..\libs\server13.5.1\EXILED_v8.12.2\Exiled.CustomItems.dll</HintPath>
+	</Reference>
+	<Reference Include="Exiled.CustomRoles">
+		<HintPath>..\..\..\libs\server13.5.1\EXILED_v8.12.2\Exiled.CustomRoles.dll</HintPath>
+	</Reference>
+	<Reference Include="Exiled.Events">
+		<HintPath>..\..\..\libs\server13.5.1\EXILED_v8.12.2\Exiled.Events.dll</HintPath>
+	</Reference>
+	<Reference Include="Exiled.Loader">
+		<HintPath>..\..\..\libs\server13.5.1\EXILED_v8.12.2\Exiled.Loader.dll</HintPath>
+	</Reference>
+	<Reference Include="Exiled.Permissions">
+		<HintPath>..\..\..\libs\server13.5.1\EXILED_v8.12.2\Exiled.Permissions.dll</HintPath>
+	</Reference>
 </ItemGroup>
   <Import Project="..\..\shared\SLCryptoAuth.Shared\SLCryptoAuth.Shared.projitems" Label="Shared" />
   <Import Project="..\..\shared\SLCryptoAuth.Shared.Mono\SLCryptoAuth.Shared.Mono.projitems" Label="Shared" />

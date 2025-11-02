@@ -1,10 +1,10 @@
 ﻿using System;
-using LabApi.Features.Console;
 using LiteNetLib;
 using SLCryptoAuth.Cryptography.DigitalSignature;
 using SLCryptoAuth.IO;
 using SLCryptoAuth.Network.DTO;
 using SLCryptoAuth.Server.Core;
+using Exiled.API.Features;
 
 namespace SLCryptoAuth.Server.PacketHandlers.V1;
 
@@ -59,7 +59,7 @@ public class AskServerHandshakeHandlerV1(Ecdsa serverIdentity) : ServerAuthPacke
         }
         catch (Exception ex)
         {
-            Logger.Error("Error: " + ex);
+            Log.Error("Error: " + ex);
             return AuthResultFactory.InvalidToken();
         }
     }

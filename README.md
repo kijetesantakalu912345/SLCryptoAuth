@@ -15,10 +15,14 @@ SCPSL v14.0.3-labapi-beta.
 * Client manifest: 7041928528288606435  
 * Server manifest: 1429960657914648293
 
+To compile SLCryptoAuth yourself:
+ 1. Switch to the git branch for the version you're interested in.
+ 2. If the server plugin uses Exiled in your selected game version, you'll need to download the files for that version of Exiled and put the DLLs in `/libs/server<game version>/EXILED_v<Exiled version you need>`.  
+  2a. This is to avoid direct licensing conflicts between Exiled's CC BY-SA 3.0 license and this project's license. Make sure that if you put Exiled stuff in any other directory that it's gitignored.
+
 To set up SLCrypoAuth for a game versison there isn't a build for here:
  1. You will need to replace dependencies and recompile the code at a bare minimum.
  2. You may need to fix any incompatabilities that may exist between the mod and the new game version. You'll probably just have to test if and see if anything breaks.
-
 ## Acknowledgements
 
 1. Some patches and/or parts of the code in this project were borrowed or based on work from the AxonSL project. The AxonSL project is licensed under the MIT license. The original copyright notice and AxonSL license text can be found here: https://github.com/AxonSL/Axon/blob/master/LICENSE.txt
@@ -26,6 +30,10 @@ To set up SLCrypoAuth for a game versison there isn't a build for here:
 2. While apparently not used for the original project, I (kijetesantakalu) am using [SCPSL-ModPatch](https://github.com/hopperlopip/SCPSL-ModPatch) to remove the client's anti-cheat, which allows melonloader to run. https://github.com/hopperlopip/SCPSL-ModPatch
 
 3. MelonLoader v1.0.0-ci.2176 ALPHA Pre-Release is used to build the client. For client installation, use [the latest melonloader loader](https://melonloader.co/download) version (0.7.0 or 0.7.1 openbeta at the time of writing).
+
+4. While Exiled is not directly included in this repo for licensing reasons, here are the links to the repos for old and new Exiled. You'll need one of these to compile the server plugin if SLCryptoAuth uses Exiled on your target game version.  
+ 4a. Old Exiled: https://github.com/Exiled-Team/EXILED  
+ 4b. New Exiled: https://github.com/ExMod-Team/EXILED  
 
 (the english version of this readme has parts from the original russian readme that were machine translated using deepl.com)
 <hr>

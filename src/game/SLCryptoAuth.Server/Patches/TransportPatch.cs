@@ -2,9 +2,9 @@
 using System.Text;
 using HarmonyLib;
 using JetBrains.Annotations;
-using LabApi.Features.Console;
 using LiteNetLib;
 using SLCryptoAuth.Server.Core;
+using Exiled.API.Features;
 
 namespace SLCryptoAuth.Server.Patches;
 
@@ -37,7 +37,7 @@ public static class TransportPatch
         }
         catch (Exception e)
         {
-            Logger.Error(e);
+            Log.Error(e.ToString());
         }
 
         return true;

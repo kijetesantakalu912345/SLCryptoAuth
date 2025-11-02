@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Linq;
-using LabApi.Features.Console;
 using LiteNetLib;
 using SLCryptoAuth.Cryptography.DigitalSignature;
 using SLCryptoAuth.Cryptography.Encryption;
 using SLCryptoAuth.IO;
 using SLCryptoAuth.Network.DTO;
 using SLCryptoAuth.Server.Core;
+using Exiled.API.Features;
 
 namespace SLCryptoAuth.Server.PacketHandlers.V1;
 
@@ -88,7 +88,7 @@ public class ClientHandshakeHandlerV1 : ServerAuthPacketHandler
         }
         catch (Exception ex)
         {
-            Logger.Error("[EXCEPTION]: " + ex);
+            Log.Error("[EXCEPTION]: " + ex);
             return AuthResultFactory.InvalidToken();
         }
     }
